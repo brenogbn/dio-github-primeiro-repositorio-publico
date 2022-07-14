@@ -1,0 +1,13 @@
+.flex{
+    max-width: 150px;
+    padding: 10px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.item{
+    background-color:gold;
+    margin: 5px;
+}
