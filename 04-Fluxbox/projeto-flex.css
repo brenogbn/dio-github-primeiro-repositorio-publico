@@ -10,4 +10,79 @@
 .item{
     background-color:gold;
     margin: 5px;
+    
+}
+
+.flex-container{
+    display: flex;
+    flex-flow: row nowrap;
+    border: 1px solid black;
+    max-width: 500px;
+    margin-bottom: 10px
+}
+
+.flex-item{
+    background-color: #543;
+    margin: 5px;
+    width: 100px;
+    height: 50px;
+    color: white;
+    line-height: 50px;
+    text-align: center;
+}
+
+.r-nowrap{
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+}
+
+.r-wrap{
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+}
+
+.rr{
+    flex-direction: row-reverse;
+    flex-wrap: wrap-reverse;
+}
+
+
+/* Justify Content */
+
+.jc-container{
+    display: flex;
+    flex-flow: row nowrap;
+    border: 1px solid black;
+    max-width: 500px;
+    margin-bottom: 10px
+}
+
+.jc-item{
+    background-color: #345;
+    margin: 5px;
+    width: 100px;
+    height: 50px;
+    color: white;
+    line-height: 50px;
+    text-align: center;
+}
+
+.jc-start{
+    justify-content: flex-start;
+}
+
+.jc-end{
+    justify-content: flex-end;
+}
+
+.jc-space-between{
+    justify-content: space-between;
+}
+
+.jc-center{
+    justify-content: center;
+}
+
+.jc-space-around{
+    justify-content: space-around;
 }
