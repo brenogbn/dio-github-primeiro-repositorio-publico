@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="device-width,initial-scale=1">
+    <title>Flexbox - 2</title>
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: #eee;
+            border: 1px solid #000;
+            max-width: 350px;
+        }
+        .item {
+            background-color: #135;
+            margin: 5px;
+            color: white;
+            text-align: center;
+            flex: 1;
+        }
+        .flex{
+            flex: 1;
+        }
+        .center{
+            align-items: center;
+        }
+        .stretch{
+            align-items: stretch;
+        }
+        .start{
+            align-items: flex-start;
+        }
+        .end{
+            align-items: flex-end;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Flexbox - 2</h1>
+    </header>
+
+
+    <h2>Center</h2>
+    <section class="container center">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2 Lorem Ipsum</div>
+        <div class="item">Item 3</div>
+    </section>
+
+
+    <h2>Stretch</h2>
+    <section class="container stretch">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2 Lorem Ipsum</div>
+        <div class="item">Item 3</div>
+    </section>
+
+
+    <h2>Start</h2>
+    <section class="container start">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2 Lorem Ipsum</div>
+        <div class="item">Item 3</div>
+    </section>
+
+
+    <h2>End</h2>
+    <section class="container end">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2 Lorem Ipsum</div>
+        <div class="item">Item 3</div>
+    </section>
+
+</body>
+</html>
