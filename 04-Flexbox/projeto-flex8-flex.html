@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="device-width,initial-scale=1">
+    <title>Flexbox - 8</title>
+    <style>
+        .container {
+            display: flex;
+            border: 2px solid black;
+            max-width: 350px;
+        }
+        .item{
+            background-color: #135;
+            padding: 10px;
+            margin: 1px;
+            text-align: center;
+            color: white;
+            font-size: 24px;
+        }
+        .f-1{
+            flex: 1;
+            /* grow=1 shrink=1 basis=0 */
+        }
+        .f-2{
+            flex: 2;
+            /* grow=1 shrink=1 basis=0 */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Flexbox - 8</h1>
+    </header>
+    <section>
+        <h2>Flex</h2>
+        <p>Flex é um atalho para grow, shrink e basis.</p>
+        <p>Flex: 1</p>
+        <div class="container">
+            <div class="item f-1">AAAA</div>
+            <div class="item f-1">B</div>
+            <div class="item f-1">D</div>
+            <div class="item f-1">D</div>
+        </div>
+        <p>Flex: 2</p>
+        <div class="container">
+            <div class="item f-1">AAAA</div>
+            <div class="item f-1">B</div>
+            <div class="item f-2">D</div>
+            <div class="item f-2">D</div>
+        </div>
+
+    </section>
+</body>
+</html>

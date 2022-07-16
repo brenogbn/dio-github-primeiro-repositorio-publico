@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="device-width,initial-scale=1">
+    <title>Flexbox - 3</title>
+    <style>
+        .container {
+            height: 400px;
+            max-width: 300px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            border: 1px solid #000;
+        }
+        .item{
+            background-color: #135;
+            padding: 0 5px;
+            margin: 5px;
+            flex: 1;
+            text-align: center;
+            color: white;
+        }
+        .stretch{
+            flex: 1;
+            align-content: stretch;
+        }
+        .center{
+            flex: 1;
+            align-content: center;
+        }
+        .start{
+            flex: 1;
+            align-content: flex-start;
+        }
+        .end{         
+            flex: 1;
+            align-content: flex-end;
+        }
+        .around{
+            flex: 1;
+            align-content: space-between;
+        }
+        .between{
+            flex: 1;
+            align-content: space-around;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Flexbox - 3</h1>
+    </header>
+
+    <h2>Align-Content: Stretch</h2>
+    <div class="container stretch">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2 Lorem Ipsum</div>
+        <div class="item">Item 3 Lorem ipsum quia dolor sit amet</div>
+        <div class="item">Item 1 Lorem ipsum quia dolor sit amet</div>
+        <div class="item">Item 2 Lorem Ipsum</div>
+        <div class="item">Item 3 Lorem ipsum quia dolor</div>
+    </div>
+
+    <h2>Align-Content: center</h2>
+    <div class="container center">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2 Lorem Ipsum</div>
+        <div class="item">Item 3 Lorem ipsum quia dolor sit amet</div>
+        <div class="item">Item 1 Lorem ipsum quia dolor sit amet</div>
+        <div class="item">Item 2 Lorem Ipsum</div>
+        <div class="item">Item 3 Lorem ipsum quia dolor</div>
+    </div>
+
+    <h2>Align-Content: flex-start</h2>
+    <div class="container start">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2 Lorem Ipsum</div>
+        <div class="item">Item 3 Lorem ipsum quia dolor sit amet</div>
+        <div class="item">Item 1 Lorem ipsum quia dolor sit amet</div>
+        <div class="item">Item 2 Lorem Ipsum</div>
+        <div class="item">Item 3 Lorem ipsum quia dolor</div>
+    </div>
+
+    <h2>Align-Content: flex-end</h2>
+    <div class="container end">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2 Lorem Ipsum</div>
+        <div class="item">Item 3 Lorem ipsum quia dolor sit amet</div>
+        <div class="item">Item 1 Lorem ipsum quia dolor sit amet</div>
+        <div class="item">Item 2 Lorem Ipsum</div>
+        <div class="item">Item 3 Lorem ipsum quia dolor</div>
+    </div>
+
+    <h2>Align-Content: space-around</h2>
+    <div class="container around">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2 Lorem Ipsum</div>
+        <div class="item">Item 3 Lorem ipsum quia dolor sit amet</div>
+        <div class="item">Item 1 Lorem ipsum quia dolor sit amet</div>
+        <div class="item">Item 2 Lorem Ipsum</div>
+        <div class="item">Item 3 Lorem ipsum quia dolor</div>
+    </div>
+
+    <h2>Align-Content: space-between</h2>
+    <div class="container between">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2 Lorem Ipsum</div>
+        <div class="item">Item 3 Lorem ipsum quia dolor sit amet</div>
+        <div class="item">Item 1 Lorem ipsum quia dolor sit amet</div>
+        <div class="item">Item 2 Lorem Ipsum</div>
+        <div class="item">Item 3 Lorem ipsum quia dolor</div>
+    </div>
+
+</body>
+</html>

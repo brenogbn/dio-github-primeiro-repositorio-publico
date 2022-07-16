@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="device-width,initial-scale=1">
+    <title>Flexbox - 9</title>
+    <style>
+        .container {
+            display: flex;
+            border: 2px solid black;
+            max-width: 350px;
+        }
+        .item{
+            background-color: #135;
+            padding: 10px;
+            margin: 1px;
+            text-align: center;
+            color: white;
+            font-size: 24px;
+            flex: 1;
+        }
+        .o0{
+            order: 0
+        }
+        .o1{
+            order: 1
+        }
+        .o2{
+            order: 2
+        }
+        .o3{
+            order: 3
+        }
+        .o4{
+            order: 4
+        }
+        .o5{
+            order: 5
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Flexbox - 9</h1>
+    </header>
+    <section>
+        <h2>Flex Order</h2>
+        <p>Flex é um atalho para grow, shrink e basis.</p>
+        <p>order: 0</p>
+        <div class="container">
+            <div class="item o0">A</div>
+            <div class="item o0">B</div>
+            <div class="item o0">C</div>
+            <div class="item o0">D</div>
+        </div>
+        <p>order: 2</p>
+        <div class="container">
+            <div class="item o1">A</div>
+            <div class="item o2">B</div>
+            <div class="item o2">C</div>
+            <div class="item o1">D</div>
+        </div>
+
+    </section>
+</body>
+</html>

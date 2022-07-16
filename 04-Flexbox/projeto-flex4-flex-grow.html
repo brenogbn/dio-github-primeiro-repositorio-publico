@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="device-width,initial-scale=1">
+    <title>Flexbox - 4</title>
+    <style>
+        .container {
+            display: flex;
+            border: 2px solid black;
+            max-width: 350px;
+        }
+        .item{
+            background-color: #135;
+            padding: 10px;
+            margin: 5px;
+            text-align: center;
+            color: white;
+        }
+        .fg0{
+            flex-grow: 0;
+        }
+        .fg1{
+            flex-grow: 1;
+        }
+        .fg2{
+            flex-grow: 2;
+        }
+        .fg3{
+            flex-grow: 3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Flexbox - 4</h1>
+    </header>
+    <p>Flex grow não funciona com justify</p>
+
+
+    <h2>flex-grow 0</h2>
+    <div class="container">
+        <div class="item fg0">AA</div>
+        <div class="item fg0">BB</div>
+        <div class="item fg0">CC</div>
+        <div class="item fg0">DD</div>
+        <div class="item fg0">EE</div>
+    </div>
+
+
+    <h2>flex-grow 1</h2>
+    <div class="container">
+        <div class="item fg1">AA</div>
+        <div class="item fg1">BB</div>
+        <div class="item fg1">CC</div>
+        <div class="item fg1">DD</div>
+        <div class="item fg1">EE</div>
+    </div>
+
+
+    <h2>flex-grow 2</h2>
+    <div class="container">
+        <div class="item fg2">AA</div>
+        <div class="item fg2">BB</div>
+        <div class="item fg2">CC</div>
+        <div class="item fg2">DD</div>
+        <div class="item fg2">EE</div>
+    </div>
+
+
+    <h2>flex-grow 3</h2>
+    <div class="container">
+        <div class="item fg1">AA</div>
+        <div class="item fg1">BB</div>
+        <div class="item fg1">CC</div>
+        <div class="item fg3">DD</div>
+        <div class="item fg3">EE</div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="device-width,initial-scale=1">
+    <title>Flexbox - 6</title>
+    <style>
+        .container {
+            display: flex;
+            border: 2px solid black;
+            max-width: 350px;
+        }
+        .item{
+            background-color: #135;
+            padding: 10px;
+            margin: 1px;
+            text-align: center;
+            color: white;
+            font-size: 24px;
+            flex:1;
+        }
+        .s-1{
+            flex-shrink: 1;
+        }
+        .s-0{
+            flex-shrink: 0;
+            flex-basis: 50px;
+        }
+        .s-1{
+            flex-shrink: 1;
+            flex-basis: 50px;
+        }
+        .s-2{
+            flex-shrink: 2;
+            flex-basis: 50px;
+        }
+        .f-1{
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Flexbox - 7</h1>
+    </header>
+    <section>
+        <h2>Flex Shrink</h2>
+        <p>auto, px, 0, capacidade de redução ou compressão de um item</p>
+
+        <div class="container">
+            <div class="item s-1 fg-1">AAA</div>
+            <div class="item s-1 fg-1">B</div>
+            <div class="item s-1 fg-1">CCC lorem ipsum quia dolor sit amet</div>
+            <div class="item s-1 fg-1">D</div>
+            <div class="item s-1 fg-1">D</div>
+            <div class="item s-1 fg-1">D</div>
+            <div class="item s-1 fg-1">D</div>
+            <div class="item s-1 fg-1">D</div>
+            <div class="item s-1 fg-1">D</div>
+            <div class="item s-1 fg-1">D</div>
+            <div class="item s-1 fg-1">D</div>
+        </div>
+        <div class="container">
+            <div class="item s-0 fg-1">AAA</div>
+            <div class="item s-0 fg-1">B</div>
+            <div class="item s-0 fg-1">CCC lorem ipsum quia dolor sit amet</div>
+            <div class="item s-0 fg-1">D</div>
+            <div class="item s-0 fg-1">D</div>
+            <div class="item s-0 fg-1">D</div>
+            <div class="item s-0 fg-1">D</div>
+            <div class="item s-0 fg-1">D</div>
+            <div class="item s-0 fg-1">D</div>
+            <div class="item s-0 fg-1">D</div>
+            <div class="item s-0 fg-1">D</div>
+        </div>
+        
+        <div class="container">
+            <div class="item s-0 fg-1">CC</div>
+            <div class="item s-1 fg-1">Dd</div>
+            <div class="item s-2 fg-1">D2</div>
+        </div>
+        
+
+    </section>
+</body>
+</html>

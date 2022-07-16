@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="device-width,initial-scale=1">
+    <title>Flexbox - 6</title>
+    <style>
+        .container {
+            display: flex;
+            border: 2px solid black;
+            max-width: 350px;
+        }
+        .item{
+            background-color: #135;
+            padding: 10px;
+            margin: 5px;
+            text-align: center;
+            color: white;
+        }
+        .bauto{
+            flex-basis:auto;
+        }
+        .fg-1{
+            flex-grow: 1;
+        }
+        .fg-2{
+            flex-grow: 2;
+        }
+        .b-0{
+            flex-basis: 0;
+        }
+        .b-v{
+            flex-basis: 32px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Flexbox - 6</h1>
+    </header>
+    <section>
+        <h2>Flex Basis</h2>
+        <p>auto, px, 0, é o tamanho mínimo que deve ter</p>
+
+        <div class="container">
+            <div class="item bauto fg-1">AAA</div>
+            <div class="item">B</div>
+            <div class="item">CCC</div>
+            <div class="item">D</div>
+        </div>
+        <p>mais teste</p>
+        <div class="container">
+            <div class="item bauto fg-1">AAA</div>
+            <div class="item">B</div>
+            <div class="item bauto fg-1">CCC</div>
+            <div class="item">D</div>
+        </div>
+        <p>mais teste</p>
+        <div class="container">
+            <div class="item b-0 fg-2">B</div>
+            <div class="item b-0 fg-1">AAA</div>
+            <div class="item b-0 fg-1">CCC</div>
+            <div class="item b-0 fg-1">D</div>
+        </div>
+        <p>mais teste</p>
+        <div class="container">
+            <div class="item b-v">B</div>
+            <div class="item b-v">AAA</div>
+            <div class="item b-v">CCC</div>
+            <div class="item b-v">D</div>
+        </div>
+
+
+    </section>
+</body>
+</html>
