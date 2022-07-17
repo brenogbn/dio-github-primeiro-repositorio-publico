@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="device-width,initial-scale=1">
+    <title>Flexbox - 10(a)</title>
+    <style>
+        .container {
+            display: flex;
+            border: 2px solid black;
+            max-width: 350px;
+        }
+        .item{
+            background-color: #135;
+            padding: 10px;
+            margin: 1px;
+            text-align: center;
+            color: white;
+            font-size: 24px;
+            flex: 1;
+        }
+        .center{
+            align-self: center;
+        }
+        .start{
+            align-self: flex-start;
+        }
+        .end{
+            align-self: flex-end;
+        }
+        .base{
+            align-self: baseline;
+        }
+        .stretch{
+            align-self: stretch;
+        }
+        .auto{
+            align-self: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Flexbox - A</h1>
+    </header>
+    <section>
+        <h2>Flex Align-self</h2>
+        <p>Align-self: auto, flex-start, flex-end, center, stretch, baseline</p>
+        <p>center</p>
+        <div class="container">
+            <div class="item center">A</div>
+            <div class="item center">BB</div>
+            <div class="item center">CCC Lorem ipsum quia</div>
+            <div class="item center">DDDD</div>
+        </div>
+        <p>stretch / end / auto / baseline</p>
+        <div class="container">
+            <div class="item stretch">A</div>
+            <div class="item end ">BB</div>
+            <div class="item auto">CCC Lorem ipsum quia</div>
+            <div class="item base">DDDD</div>
+        </div>
+
+    </section>
+</body>
+</html>
