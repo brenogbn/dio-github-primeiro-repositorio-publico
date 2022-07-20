@@ -222,3 +222,25 @@ header ul li{
 .cor{
     color: #125;
 }
+
+footer{
+    height: 70px;
+    align-items: center;
+}
+footer div{
+    display: flex;
+    justify-content: space-between;
+    max-width: 960px;
+    margin: 0 auto;
+    height: 70px;
+    align-items: center;
+}
+
+@media(max-width: 992px){
+    .flex-container{
+        flex-direction: column;
+    }
+    .inv{
+        flex-direction: column-reverse;
+    }
+}
