@@ -70,3 +70,37 @@ const sm = function (a, b, c, d, e) {
     return a + b + c + d + e
 }
 console.log(sm(...nums))
+
+function tam (...args){
+    return args.length
+}
+console.log(tam(1,2,3,4,5))
+
+// destructuring
+
+const user = {
+    name: "asdf",
+    age: 23,
+    address: {
+        street: "asdfs",
+        city: "asdf",
+        state: "asdf"
+    }
+}
+function getuser({name, age}) {
+    console.log(name, age)
+}
+getuser(user)
+
+function getuser2({name, age, address: {street:a, city, state}}) {
+    console.log(name, age, a, city, state)
+}
+getuser2(user)
+
+/*
+if else, clean code, etc...
+devemos declarar tudo antes de usar...
+
+const, var, let...
+*/
+
