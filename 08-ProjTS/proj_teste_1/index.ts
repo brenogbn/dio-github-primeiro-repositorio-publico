@@ -27,11 +27,33 @@ let listId = '7101979';
 let loginButton = document.getElementById('login-button') as HTMLButtonElement;
 let searchButton = document.getElementById('search-button') as HTMLButtonElement;
 let searchContainer = document.getElementById('search-container') as HTMLDivElement;
+let botao_login_ = document.getElementById('show_login') as HTMLButtonElement;
+
+botao_login_.addEventListener('click', async () => {
+    let div_login = document.getElementById('div_login') as HTMLDivElement;
+    div_login.style.display = "flex";
+    let div_busca = document.getElementById('div_busca') as HTMLButtonElement;
+    div_busca.style.display = "none";
+} )
+
 
 loginButton.addEventListener('click', async () => {
   await criarRequestToken();
   await logar();
   await criarSessao();
+  
+  try{
+    await criarRequestToken();
+    await pegarListas();
+  }catch(e){
+    console.log(e)
+  }
+  let botao_login = document.getElementById('show_login') as HTMLButtonElement;
+  botao_login.style.display = "inline";
+  let div_login = document.getElementById('div_login') as HTMLButtonElement;
+  div_login.style.display = "none";
+  let div_busca = document.getElementById('div_busca') as HTMLButtonElement;
+  div_busca.style.display = "inline";
 })
 
 searchButton.addEventListener('click', async () => {
@@ -130,11 +152,12 @@ async function criarRequestToken () {
     url: `https://api.themoviedb.org/3/authentication/token/new?api_key=${apiKey}`,
     method: "GET"
   })
+  console.log(result)
   requestToken = result.request_token
 }
 
 async function logar() {
-  await HttpClient.get({
+  var result = await HttpClient.get({
     url: `https://api.themoviedb.org/3/authentication/token/validate_with_login?api_key=${apiKey}`,
     method: "POST",
     body: {
@@ -142,7 +165,11 @@ async function logar() {
       password: `${password}`,
       request_token: `${requestToken}`
     }
+    
   })
+  console.log("logando...")
+  console.log(result)
+
 }
 
 async function criarSessao() {
@@ -150,7 +177,9 @@ async function criarSessao() {
     url: `https://api.themoviedb.org/3/authentication/session/new?api_key=${apiKey}&request_token=${requestToken}`,
     method: "GET"
   })
+  console.log("criarSessao...")
   sessionId = result.session_id;
+  console.log(result);
 }
 
 async function criarLista(nomeDaLista, descricao) {
@@ -180,6 +209,14 @@ async function adicionarFilmeNaLista(filmeId, listaId) {
 async function pegarLista() {
   let result = await HttpClient.get({
     url: `https://api.themoviedb.org/3/list/${listId}?api_key=${apiKey}`,
+    method: "GET"
+  })
+  console.log(result);
+}
+
+async function pegarListas() {
+  let result = await HttpClient.get({
+    url: `https://api.themoviedb.org/3/account/${username}/lists?api_key=${apiKey}`,
     method: "GET"
   })
   console.log(result);

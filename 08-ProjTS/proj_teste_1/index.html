@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Busca por Filmes</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Vou colocar o Bootstrap para ter uma aparência melhor -->
+</head>
+<body>
+    <div class="jumbotron text-center">
+        <h1>Busca de Filmes</h1>
+        <button id="show_login" style="display: none" title="Informações de Login">Login</button>
+        <div id="div_login" style="display: flex; width: 300px; height: 100px; justify-content: space-between; flex-direction: column; margin: 0 auto">
+            <p>Faça login para continuar.</p>
+            <input id="login" placeholder="Login" onchange="preencherLogin(event)">
+            <input id="senha" placeholder="Senha" type="password" onchange="preencherSenha(event)">
+            <input id="api-key" placeholder="Api Key" onchange="preencherApi()">
+            <button id="login-button">Login</button>
+        </div>
+        <div id="div_busca" style="display: none">
+            <input id="search" placeholder="Buscar filme">
+            <button id="search-button">Pesquisar Filme</button>
+        </div>
+    </div>
+    <div style="display: flex;">
+        
+        
+        <div id="search-container" style="margin-left: 20px">
+            
+            
+        </div>
+      </div>
+    <script src="index.ts"></script>
+</body>
+</html>
