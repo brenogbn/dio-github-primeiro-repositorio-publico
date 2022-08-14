@@ -1,14 +1,15 @@
 // O código abaixo tem alguns erros e não funciona como deveria. Você pode identificar quais são e corrigi-los em um arquivo TS?
 
-let botaoAtualizar = document.getElementById('atualizar-saldo');
-let botaoLimpar = document.getElementById('limpar-saldo');
-let soma = document.getElementById('soma');
-let campoSaldo = document.getElementById('campo-saldo');
+// Temos que colocar os tipos...
+let botaoAtualizar = document.getElementById('atualizar-saldo') as HTMLButtonElement;
+let botaoLimpar = document.getElementById('limpar-saldo') as HTMLButtonElement;
+let soma = document.getElementById('soma') as HTMLInputElement;
+let campoSaldo = document.getElementById('campo-saldo') as HTMLSpanElement;
 
-campoSaldo.innerHTML = 0
+campoSaldo.innerHTML = "0" // tem que ser string, não número.
 
 function somarAoSaldo(soma) {
-    campoSaldo.innerHTML += soma;
+    campoSaldo.innerHTML = parseInt(campoSaldo.innerHTML) + soma;
 }
 
 function limparSaldo() {

@@ -1,5 +1,21 @@
 // Como podemos melhorar o esse código usando TS? 
 
+// isto pode ser melhor representado utilizando Orientação a Objetos.
+
+interface Pessoa {
+    nome: string;
+    idade: number;
+    profissao: string;
+}
+
+var pessoas: Pessoa[] = [
+    {nome: 'Maria',idade: 29,profissao: 'Atriz'},
+    {nome: 'Roberto',idade: 19,profissao: 'Padeiro'},
+    {nome: 'Laura',idade: 32,profissao: 'Atriz'},
+    {nome: 'Carlos',idade: 19,profissao: 'Padeiro'}
+]
+
+/*
 let pessoa1 = {};
 pessoa1.nome = "maria";
 pessoa1.idade = 29;
@@ -21,3 +37,4 @@ let pessoa4 = {
     idade = 19,
     profissao = "padeiro"
 }
+*/
