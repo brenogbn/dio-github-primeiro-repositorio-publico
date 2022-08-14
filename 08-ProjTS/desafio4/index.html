@@ -12,15 +12,15 @@
 <body>
     <div class="jumbotron text-center">
         <h1>Busca de Filmes</h1>
-        <button id="show_login" style="display: none" title="Informações de Login">Login</button>
-        <div id="div_login" style="display: flex; width: 300px; height: 100px; justify-content: space-between; flex-direction: column; margin: 0 auto">
+        <button id="show_login" style="display: inline-block" title="Informações de Login">Login</button>
+        <div id="div_login" style="display: none; width: 300px; height: 100px; justify-content: space-between; flex-direction: column; margin: 0 auto">
             <p>Faça login para continuar.</p>
             <input id="login" placeholder="Login" onchange="preencherLogin(event)">
             <input id="senha" placeholder="Senha" type="password" onchange="preencherSenha(event)">
             <input id="api-key" placeholder="Api Key" onchange="preencherApi()">
             <button id="login-button">Login</button>
         </div>
-        <div id="div_busca" style="display: none">
+        <div id="div_busca" style="display: inline-block">
             <input id="search" placeholder="Buscar filme">
             <button id="search-button">Pesquisar Filme</button>
         </div>

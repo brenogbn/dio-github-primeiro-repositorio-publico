@@ -2,6 +2,8 @@
 
 console.log("Bem-vindo, visitante do DevTools!!")
 
+// o correto era isto não estar no código.
+// como é um exemplo, vou deixar aqui.
 const SECKEY = 'e1124417198fcf54d74dcded8d673282' ;
 
 
@@ -63,12 +65,31 @@ searchButton.addEventListener('click', async () => {
   }
   let query = document.getElementById('search').value;
   let listaDeFilmes:any = await procurarFilme(query);
-  let ul = document.createElement('ul');
+  let ul = document.createElement('div');
   ul.id = "lista"
+  ul.classList.add('row');
   for (const item of listaDeFilmes.results) {
-    let li = document.createElement('li');
-    li.appendChild(document.createTextNode(item.original_title))
-    ul.appendChild(li)
+    console.log(item);
+    console.log("item...")
+    let li = document.createElement('div');
+    li.classList.add('card');
+    li.classList.add('col-md-3');
+    li.style.width="18rem";
+    //li.appendChild(document.createTextNode(item.original_title))
+    // acabei utilizando o innerHTML por ser mais rápido
+    // não achei na doc da API como pegar a lista de listas de filmes
+    // para selecionar as listas.
+    /* pensei em colocar uma seleção de listas, com select, mas não achei a API.
+    seria interessante também apresentar as listas salvas, e ter uma verificação
+    se o filme está ou não lá.
+    */
+    li.innerHTML = `<div class="card" style="margin: 0.3em;">\
+    <img class="card-img-top" style="margin: 0 auto; display: block; width: 8em; height: 12em;" src="https://image.tmdb.org/t/p/w500${item.poster_path}" onerror="this.style.display = 'None'">\
+    <div id="card-body">
+    <h5 style="text-align: center; white-space:nowrap; overflow:hidden;text-overflow:elipsis" class="card-title" title="${item.overview}">${item.original_title}</h5>\
+      </div>`;
+    li.classList.add('list-group-item');
+    if (item.poster_path) ul.appendChild(li)
   }
   console.log(listaDeFilmes);
   searchContainer.appendChild(ul);
