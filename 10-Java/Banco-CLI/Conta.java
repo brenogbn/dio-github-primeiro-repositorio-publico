@@ -16,7 +16,7 @@ public abstract class Conta implements IConta{
     public void addExtrato(String extrato){
         this.extrato.add(extrato);
     }
-    public void sacar(double valor){
+    public void sacar(int valor){
         if (valor > this.saldo){
             System.out.println("Saldo insuficiente");
             this.addExtrato("Saldo insuficiente");
@@ -25,11 +25,11 @@ public abstract class Conta implements IConta{
             this.addExtrato("Saque: " + valor + " - Saldo: " + this.saldo);
         }
     }
-    public void depositar(double valor){
+    public void depositar(long valor){
         this.saldo += valor;
         this.addExtrato("Deposito: " + valor + " - Saldo: " + this.saldo);
     }
-    public void transferir(double valor, Conta conta){
+    public void transferir(long valor, Conta conta){
         this.sacar(valor);
         conta.depositar(valor);
         this.addExtrato("Transferência: " + valor + " - Saldo: " + this.saldo + "Origem: " + this.agencia + "-" + this.numero + " - Destino: " + conta.agencia + "-" + conta.numero);

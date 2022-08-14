@@ -17,14 +17,14 @@ public class Banco {
             }
         }
     }
-    public void sacar(int agencia, int numero, double valor){
+    public void sacar(int agencia, int numero, long valor){
         for (Conta conta : contas){
             if (conta.agencia == agencia && conta.numero == numero){
                 conta.sacar(valor);
             }
         }
     }
-    public void depositar(int agencia, int numero, double valor){
+    public void depositar(int agencia, int numero, long valor){
         for (Conta conta : contas){
             if (conta.agencia == agencia && conta.numero == numero){
                 conta.depositar(valor);

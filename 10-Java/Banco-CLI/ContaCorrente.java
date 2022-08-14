@@ -7,4 +7,13 @@ public class ContaCorrente extends Conta{
         super.cpfcnpj = cpfcnpj;
         super.nome = nome;
     }
+    public void sacar(long valor){
+        if (valor > this.saldo+this.limite){
+            System.out.println("Saldo insuficiente");
+            this.addExtrato("Saldo insuficiente");
+        }else{
+            this.saldo -= valor;
+            this.addExtrato("Saque: " + valor + " - Saldo: " + this.saldo);
+        }
+    }
 }

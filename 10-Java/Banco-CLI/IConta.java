@@ -1,6 +1,7 @@
 public interface IConta{
-    public void sacar(double valor);
-    public void depositar(double valor);
-    public void transferir(double valor, Conta conta);
+    public void sacar(long valor);
+    public void depositar(long valor);
+    public void transferir(long valor, Conta conta);
     public long getSaldo();
+    public void addExtrato(String extrato);
 }

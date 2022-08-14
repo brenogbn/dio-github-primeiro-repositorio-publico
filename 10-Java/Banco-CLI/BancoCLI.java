@@ -11,7 +11,7 @@ public class BancoCLI {
         banco.depositar(0, 1, 500);
         banco.listaContas();
         banco.extrato(0, 1);
-        banco.sacar(0, 1, 500);
+        banco.sacar(0, 1, 600);
         banco.extrato(0, 1);
     }
 
