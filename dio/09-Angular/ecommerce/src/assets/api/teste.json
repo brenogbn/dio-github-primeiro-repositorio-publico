@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "Sherlock",
+        "price": 20,
+        "quantity": 20,
+        "category": "Livros",
+        "img": "/assets/images/img1.jpg"
+    },
+    {
+        "id": 2,
+        "name": "O Mundo de Sofia",
+        "price": 20,
+        "quantity": 20,
+        "category": "Livros",
+        "img": "/assets/images/img2.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Arsene Lupin",
+        "price": 20,
+        "quantity": 20,
+        "category": "Livros",
+        "img": "/assets/images/img3.jpg"
+    }
+]
