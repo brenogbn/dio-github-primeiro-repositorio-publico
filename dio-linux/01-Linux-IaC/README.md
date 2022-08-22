@@ -38,34 +38,8 @@ definições:
 O Shell suporta outras estruturas que facilitam e melhoram este código.
 Poderíamos por exemplo, criar variáveis e iterações que podem ser reutilizadas no decorrer da execução.
 
-### 1. Excluir diretórios
-
-
-### 2. Excluir usuários e /home/...
-
-
-
-
 
 
 ## Solução final
 
-DIR="publico adm ven sec"
-
-USR="carlos maria joao debora sebastiana roberto josefina amanda rogerio"
-
-GRP_ADM="carlos maria joao"
-
-GRP_VEN="debora sebastiana roberto"
-
-GRP_SEC="josefina amanda rogerio"
-
-GRP="GRP_ADM GRP_VEN GRP_SEC"
-
-for i in $DIR; 
-do echo "Excluindo diretorio $i";
-echo rm -rf /$i;
-echo "Criando diretorio $i";
-echo mkdir /$i;
-done;
-
+(iac-linux.sh)[iac-linux.sh]
