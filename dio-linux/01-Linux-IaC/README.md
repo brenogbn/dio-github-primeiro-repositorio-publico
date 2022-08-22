@@ -42,4 +42,4 @@ Poderíamos por exemplo, criar variáveis e iterações que podem ser reutilizad
 
 ## Solução final
 
-(iac-linux.sh)[iac-linux.sh]
+[iac-linux.sh](iac-linux.sh)
