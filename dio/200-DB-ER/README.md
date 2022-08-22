@@ -128,12 +128,13 @@ Modelagem:
    - Um produto pode ter vários fornecedores, cada um com seu estoque.
    - Os preços são armazenados em centavos, visto que o tipo INT possui a precisão necessária para tal. O uso de double/float não possui a precisão necessária para representar moeda.
  - Pedido
-   - Possui ID único, vínculo com o Cliente, data, valor total, último status e endereço de entrega.
+   - Possui ID único, vínculo com o Cliente, data, valor total, último status, endereço de entrega e forma de pagamento.
  - ProdutosPedido
    - Possui os produtos selecionados em um pedido. Os campos criados são Pedido, Produto, Vendedor, Quantidade e Valor Unitário.
    - São armazenados os dados do valor para fins históricos, visto que com o tempo os preços serão alterados.
  - HistoricoPedido
    - Possui o número do pedido, a data da alteração do status, o status anterior e novo, uma descrição e um comentário. Esta tabela pode ser utilizada para armazenar o histórico de um pedido e colocar anotações como Pedido Gerado, Pedido Pago, Pedido Cancelado, Pedido Devolvido.
+   - Informações como o código de rastreio, andamento e devolução serão armazenadas aqui.
  - StatusPedido
    - Tabela estática que possui os status possíveis utilizados nas tabelas Pedido e HistoricoPedido.
  - Estoque
