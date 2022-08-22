@@ -133,7 +133,7 @@ Modelagem:
    - Possui os produtos selecionados em um pedido. Os campos criados são Pedido, Produto, Vendedor, Quantidade e Valor Unitário.
    - São armazenados os dados do valor para fins históricos, visto que com o tempo os preços serão alterados.
  - HistoricoPedido
-   - Possui o número do pedido, a data da alteração do status, o status anterior e novo, uma descrição e um comentário. Esta tabela pode ser utilizada para armazenar o histórico de um pedido e colocar anotações como Pedido Gerado, Pedido Pago, Pedido Cancelado, Pedido Devolvido.
+   - Possui o número do pedido, a data da alteração do status, o status anterior e novo, uma descrição, um comentário e meta-dados. Esta tabela pode ser utilizada para armazenar o histórico de um pedido e colocar anotações como Pedido Gerado, Pedido Pago, Pedido Cancelado, Pedido Devolvido.
    - Informações como o código de rastreio, andamento e devolução serão armazenadas aqui.
  - StatusPedido
    - Tabela estática que possui os status possíveis utilizados nas tabelas Pedido e HistoricoPedido.
@@ -144,3 +144,7 @@ Modelagem:
  - Endereco
    - Cada endereço possui um ID e não é recomendável a alteração de endereços mas sim o cadastro de novos.
    - CEP, UF, Cidade, Logradouro, Número e Complemento.
+ - FormasDePagamento
+   - Esta tabela possui as formas válidas que podem ser utilizada nas compras, tais como Pix e cartões de Débito e Crédito.
+ - FormaDePagamento
+   - Esta tabela possui o vínculo de uma forma de pagamento válida, um cliente e seus meta-dados que podem variar de acordo com a forma.
